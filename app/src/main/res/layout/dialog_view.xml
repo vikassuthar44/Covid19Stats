@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/closeIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_close_24"
+        android:padding="@dimen/ten_dp"
+        android:background="?attr/selectableItemBackground"/>
+    <TextView
+        android:id="@+id/filterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Filter"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sixteen_sp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/ten_dp"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/filterReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroup"
+        android:layout_centerHorizontal="true"
+        android:text="Reset Filter"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sixteen_sp"
+
+        android:layout_margin="@dimen/ten_dp"/>
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_below="@id/filterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/twenty_dp">
+
+        <RadioButton
+            android:id="@+id/countryAsc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:button="@null"
+            android:background="?attr/selectableItemBackground"
+            android:drawablePadding="@dimen/ten_dp"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:drawableEnd="@android:drawable/btn_radio"
+            android:text="Country ASC"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sixteen_sp"
+            android:gravity="center"
+            tools:ignore="RtlCompat" />
+        <RadioButton
+            android:id="@+id/countryDsc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@android:color/white"
+            android:button="@null"
+            
+            tools:ignore="RtlCompat"
+            android:drawablePadding="@dimen/ten_dp"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:drawableEnd="@android:drawable/btn_radio"
+            android:text="Country DESC"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sixteen_sp"
+            android:gravity="center"
+           />
+        <RadioButton
+            android:id="@+id/totalCasesAsc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="?attr/selectableItemBackground"
+            android:button="@null"
+            tools:ignore="RtlCompat"
+            android:drawablePadding="@dimen/ten_dp"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:drawableEnd="@android:drawable/btn_radio"
+            android:text="Total Cases ASC"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sixteen_sp"
+            android:gravity="center"/>
+        <RadioButton
+            android:id="@+id/totalCasesDsc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="?attr/selectableItemBackground"
+            android:button="@null"
+            
+            tools:ignore="RtlCompat"
+            android:drawablePadding="@dimen/ten_dp"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:drawableEnd="@android:drawable/btn_radio"
+            android:text="Total Cases DESC"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sixteen_sp"
+            android:gravity="center"/>
+        <RadioButton
+            android:id="@+id/totalDeathsAsc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="?attr/selectableItemBackground"
+            android:button="@null"
+            
+            tools:ignore="RtlCompat"
+            android:drawablePadding="@dimen/ten_dp"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:drawableEnd="@android:drawable/btn_radio"
+            android:text="Total Deaths ASC"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sixteen_sp"
+            android:gravity="center"/>
+        <RadioButton
+            android:id="@+id/totalDeathsDsc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="?attr/selectableItemBackground"
+            android:button="@null"
+            
+            tools:ignore="RtlCompat"
+            android:drawablePadding="@dimen/ten_dp"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:drawableEnd="@android:drawable/btn_radio"
+            android:text="Total Deaths DESC"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sixteen_sp"
+            android:gravity="center"/>
+        <RadioButton
+            android:id="@+id/totalRecoveredAsc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="?attr/selectableItemBackground"
+            android:button="@null"
+            
+            tools:ignore="RtlCompat"
+            android:drawablePadding="@dimen/ten_dp"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:drawableEnd="@android:drawable/btn_radio"
+            android:text="Total Recovered ASC"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sixteen_sp"
+            android:gravity="center"/>
+        <RadioButton
+            android:id="@+id/totalRecoveredDsc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="?attr/selectableItemBackground"
+            android:button="@null"
+            tools:ignore="RtlCompat"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:drawableEnd="@android:drawable/btn_radio"
+            android:text="Total Recovered DESC"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sixteen_sp"
+            android:gravity="center"/>
+
+    </RadioGroup>
+</RelativeLayout>

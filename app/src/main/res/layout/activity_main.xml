@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainActivity"
+    android:background="#E8E8E8"
+    android:id="@+id/rootView">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/ten_dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLeft"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintGuide_begin="@dimen/ten_dp"
+        android:orientation="vertical"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideRight"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintGuide_end="@dimen/ten_dp"
+        android:orientation="vertical"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideBottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintGuide_end="@dimen/ten_dp"
+        android:orientation="horizontal"/>
+
+    <include
+        android:id="@+id/topView"
+        app:layout_constraintTop_toBottomOf="@id/guideTop"
+        app:layout_constraintStart_toEndOf="@id/guideLeft"
+        app:layout_constraintEnd_toStartOf="@id/guideRight"
+        layout="@layout/action_bar_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_marginTop="@dimen/ten_dp"
+        android:id="@+id/totalCases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/totalDeaths"
+        app:layout_constraintStart_toEndOf="@id/guideLeft"
+        app:layout_constraintTop_toBottomOf="@id/topView"
+        android:background="@drawable/background"
+        android:padding="@dimen/ten_dp"
+        android:layout_marginEnd="@dimen/ten_dp"
+        android:layout_marginRight="@dimen/ten_dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Cases"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/sixteen_sp"/>
+
+        <TextView
+            android:id="@+id/tvTotalCases"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/sixteen_sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/totalDeaths"
+        android:layout_marginTop="@dimen/ten_dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/totalRecovered"
+        app:layout_constraintStart_toEndOf="@id/totalCases"
+        app:layout_constraintTop_toBottomOf="@id/topView"
+        android:background="@drawable/background"
+        android:padding="@dimen/ten_dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Deaths"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/sixteen_sp"/>
+
+        <TextView
+            android:id="@+id/tvTotalDeaths"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/sixteen_sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/totalRecovered"
+        android:layout_marginTop="@dimen/ten_dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/topView"
+        app:layout_constraintStart_toEndOf="@id/totalDeaths"
+        app:layout_constraintEnd_toStartOf="@id/guideRight"
+        android:background="@drawable/background"
+        android:padding="@dimen/ten_dp"
+        android:layout_marginLeft="@dimen/ten_dp"
+        android:layout_marginStart="@dimen/ten_dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Recovered"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/sixteen_sp"/>
+
+        <TextView
+            android:id="@+id/tvTotalRecovered"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/sixteen_sp"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/background"
+        app:layout_constraintTop_toBottomOf="@id/totalDeaths"
+        app:layout_constraintStart_toEndOf="@id/guideLeft"
+        app:layout_constraintEnd_toStartOf="@id/guideRight"
+        android:layout_marginTop="@dimen/twenty_dp"
+        app:layout_constraintBottom_toTopOf="@id/guideBottom">
+
+        <TextView
+            android:id="@+id/country"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Country"
+            android:textColor="@android:color/black"
+            android:textAllCaps="true"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/sixteen_sp"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvCountyCases"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingTop="@dimen/twenty_dp"/>
+        <TextView
+            android:id="@+id/tvCountyCases"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Total Cases"
+            android:textColor="@android:color/black"
+            android:textAllCaps="true"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/sixteen_sp"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/country"
+            app:layout_constraintEnd_toStartOf="@id/tvCountryDeaths"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingTop="@dimen/twenty_dp"/>
+        <TextView
+            android:id="@+id/tvCountryDeaths"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Deaths"
+            android:textColor="@android:color/black"
+            android:textAllCaps="true"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/sixteen_sp"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/tvCountyCases"
+            app:layout_constraintEnd_toStartOf="@id/tvCountryrecovered"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingTop="@dimen/twenty_dp"/>
+        <TextView
+            android:id="@+id/tvCountryrecovered"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Recovered"
+            android:textColor="@android:color/black"
+            android:textAllCaps="true"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/sixteen_sp"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/tvCountryDeaths"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingTop="@dimen/twenty_dp"/>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="#E8E8E8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCountyCases"
+            android:layout_marginTop="@dimen/ten_dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/countryList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/tryAgain"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Try Again"
+        app:layout_constraintTop_toBottomOf="@id/guideTop"
+        app:layout_constraintStart_toEndOf="@id/guideLeft"
+        app:layout_constraintBottom_toTopOf="@id/guideBottom"
+        app:layout_constraintEnd_toStartOf="@id/guideRight"/>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Try Again"
+        app:layout_constraintTop_toBottomOf="@id/guideTop"
+        app:layout_constraintStart_toEndOf="@id/guideLeft"
+        app:layout_constraintBottom_toTopOf="@id/guideBottom"
+        app:layout_constraintEnd_toStartOf="@id/guideRight"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
