@@ -269,7 +269,9 @@ public class MainActivity extends DaggerAppCompatActivity implements MainContrac
     public void showErrorMeassage(String error) {
         Snackbar.make(rootView, error, Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show();
-        tryAgain.setVisibility(View.VISIBLE);
+        if(currentCountryWiseData != null) {
+            tryAgain.setVisibility(View.VISIBLE);
+        }
         progressBar.setVisibility(View.GONE);
         tryAgain.setOnClickListener(new View.OnClickListener() {
             @Override
