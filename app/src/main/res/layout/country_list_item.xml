@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground">
 
     <TextView
         android:id="@+id/country"
@@ -12,7 +13,7 @@
         android:text="Country"
         android:textAllCaps="true"
         android:gravity="center_horizontal"
-        android:textSize="@dimen/sixteen_sp"
+        android:textSize="@dimen/fourteen_sp"
         app:layout_constraintVertical_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/tvCases"
@@ -24,7 +25,7 @@
         android:layout_height="wrap_content"
         android:textAllCaps="true"
         android:gravity="center_horizontal"
-        android:textSize="@dimen/sixteen_sp"
+        android:textSize="@dimen/fourteen_sp"
         app:layout_constraintVertical_chainStyle="spread"
         app:layout_constraintStart_toEndOf="@id/country"
         app:layout_constraintEnd_toStartOf="@id/tvDeaths"
@@ -36,7 +37,7 @@
         android:layout_height="wrap_content"
         android:textAllCaps="true"
         android:gravity="center_horizontal"
-        android:textSize="@dimen/sixteen_sp"
+        android:textSize="@dimen/fourteen_sp"
         app:layout_constraintVertical_chainStyle="spread"
         app:layout_constraintStart_toEndOf="@id/tvCases"
         app:layout_constraintEnd_toStartOf="@id/tvRecovered"
@@ -48,7 +49,7 @@
         android:layout_height="wrap_content"
         android:textAllCaps="true"
         android:gravity="center_horizontal"
-        android:textSize="@dimen/sixteen_sp"
+        android:textSize="@dimen/fourteen_sp"
         app:layout_constraintVertical_chainStyle="spread"
         app:layout_constraintStart_toEndOf="@id/tvDeaths"
         app:layout_constraintEnd_toEndOf="parent"

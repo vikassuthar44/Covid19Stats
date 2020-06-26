@@ -47,32 +47,28 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:button="@null"
+            android:paddingStart="@dimen/ten_dp"
+            android:paddingLeft="@dimen/ten_dp"
             android:background="?attr/selectableItemBackground"
             android:drawablePadding="@dimen/ten_dp"
-            android:drawableRight="@android:drawable/btn_radio"
-            android:drawableEnd="@android:drawable/btn_radio"
             android:text="Country ASC"
             android:textColor="@android:color/black"
             android:textSize="@dimen/sixteen_sp"
-            android:gravity="center"
             tools:ignore="RtlCompat" />
         <RadioButton
             android:id="@+id/countryDsc"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:background="@android:color/white"
-            android:button="@null"
-            
+            android:background="?attr/selectableItemBackground"
             tools:ignore="RtlCompat"
+            android:paddingStart="@dimen/ten_dp"
+            android:paddingLeft="@dimen/ten_dp"
             android:drawablePadding="@dimen/ten_dp"
-            android:drawableRight="@android:drawable/btn_radio"
-            android:drawableEnd="@android:drawable/btn_radio"
             android:text="Country DESC"
             android:textColor="@android:color/black"
             android:textSize="@dimen/sixteen_sp"
-            android:gravity="center"
+           
            />
         <RadioButton
             android:id="@+id/totalCasesAsc"
@@ -80,93 +76,83 @@
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:background="?attr/selectableItemBackground"
-            android:button="@null"
             tools:ignore="RtlCompat"
+            android:paddingStart="@dimen/ten_dp"
+            android:paddingLeft="@dimen/ten_dp"
             android:drawablePadding="@dimen/ten_dp"
-            android:drawableRight="@android:drawable/btn_radio"
-            android:drawableEnd="@android:drawable/btn_radio"
             android:text="Total Cases ASC"
             android:textColor="@android:color/black"
             android:textSize="@dimen/sixteen_sp"
-            android:gravity="center"/>
+           />
         <RadioButton
             android:id="@+id/totalCasesDsc"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:background="?attr/selectableItemBackground"
-            android:button="@null"
-            
             tools:ignore="RtlCompat"
+            android:paddingStart="@dimen/ten_dp"
+            android:paddingLeft="@dimen/ten_dp"
             android:drawablePadding="@dimen/ten_dp"
-            android:drawableRight="@android:drawable/btn_radio"
-            android:drawableEnd="@android:drawable/btn_radio"
             android:text="Total Cases DESC"
             android:textColor="@android:color/black"
             android:textSize="@dimen/sixteen_sp"
-            android:gravity="center"/>
+           />
         <RadioButton
             android:id="@+id/totalDeathsAsc"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:background="?attr/selectableItemBackground"
-            android:button="@null"
-            
             tools:ignore="RtlCompat"
+            android:paddingStart="@dimen/ten_dp"
+            android:paddingLeft="@dimen/ten_dp"
             android:drawablePadding="@dimen/ten_dp"
-            android:drawableRight="@android:drawable/btn_radio"
-            android:drawableEnd="@android:drawable/btn_radio"
             android:text="Total Deaths ASC"
             android:textColor="@android:color/black"
             android:textSize="@dimen/sixteen_sp"
-            android:gravity="center"/>
+           />
         <RadioButton
             android:id="@+id/totalDeathsDsc"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:background="?attr/selectableItemBackground"
-            android:button="@null"
-            
             tools:ignore="RtlCompat"
+            android:paddingStart="@dimen/ten_dp"
+            android:paddingLeft="@dimen/ten_dp"
             android:drawablePadding="@dimen/ten_dp"
-            android:drawableRight="@android:drawable/btn_radio"
-            android:drawableEnd="@android:drawable/btn_radio"
             android:text="Total Deaths DESC"
             android:textColor="@android:color/black"
             android:textSize="@dimen/sixteen_sp"
-            android:gravity="center"/>
+           />
         <RadioButton
             android:id="@+id/totalRecoveredAsc"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:background="?attr/selectableItemBackground"
-            android:button="@null"
-            
             tools:ignore="RtlCompat"
+            android:paddingStart="@dimen/ten_dp"
+            android:paddingLeft="@dimen/ten_dp"
             android:drawablePadding="@dimen/ten_dp"
-            android:drawableRight="@android:drawable/btn_radio"
-            android:drawableEnd="@android:drawable/btn_radio"
             android:text="Total Recovered ASC"
             android:textColor="@android:color/black"
             android:textSize="@dimen/sixteen_sp"
-            android:gravity="center"/>
+           />
         <RadioButton
             android:id="@+id/totalRecoveredDsc"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:background="?attr/selectableItemBackground"
-            android:button="@null"
             tools:ignore="RtlCompat"
-            android:drawableRight="@android:drawable/btn_radio"
-            android:drawableEnd="@android:drawable/btn_radio"
+            android:paddingStart="@dimen/ten_dp"
+            android:paddingLeft="@dimen/ten_dp"
             android:text="Total Recovered DESC"
             android:textColor="@android:color/black"
             android:textSize="@dimen/sixteen_sp"
-            android:gravity="center"/>
+           />
 
     </RadioGroup>
 </RelativeLayout>

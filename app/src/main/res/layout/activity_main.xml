@@ -42,48 +42,50 @@
         layout="@layout/action_bar_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"/>
+
     <LinearLayout
-        android:layout_marginTop="@dimen/ten_dp"
         android:id="@+id/totalCases"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/ten_dp"
+        android:layout_marginEnd="@dimen/ten_dp"
+        android:background="@drawable/background_total_cases"
         android:orientation="vertical"
+        android:padding="@dimen/ten_dp"
+        android:layout_marginBottom="@dimen/twenty_dp"
+        app:layout_constraintBottom_toTopOf="@+id/constrainView"
         app:layout_constraintEnd_toStartOf="@+id/totalDeaths"
         app:layout_constraintStart_toEndOf="@id/guideLeft"
-        app:layout_constraintTop_toBottomOf="@id/topView"
-        android:background="@drawable/background"
-        android:padding="@dimen/ten_dp"
-        android:layout_marginEnd="@dimen/ten_dp"
-        android:layout_marginRight="@dimen/ten_dp">
+        app:layout_constraintTop_toBottomOf="@id/topView">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Total Cases"
-            android:textStyle="bold"
-            android:textColor="@android:color/black"
             android:gravity="center_horizontal"
-            android:textSize="@dimen/sixteen_sp"/>
+            android:text="Total Cases"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sixteen_sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvTotalCases"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
             android:gravity="center_horizontal"
-            android:textSize="@dimen/sixteen_sp"/>
+            android:textSize="@dimen/sixteen_sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/totalDeaths"
-        android:layout_marginTop="@dimen/ten_dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toStartOf="@+id/totalRecovered"
         app:layout_constraintStart_toEndOf="@id/totalCases"
-        app:layout_constraintTop_toBottomOf="@id/topView"
-        android:background="@drawable/background"
+        app:layout_constraintTop_toTopOf="@id/totalRecovered"
+        app:layout_constraintBottom_toBottomOf="@id/totalRecovered"
+        android:background="@drawable/background_total_deaths"
         android:padding="@dimen/ten_dp">
 
         <TextView
@@ -107,13 +109,15 @@
     <LinearLayout
         android:id="@+id/totalRecovered"
         android:layout_marginTop="@dimen/ten_dp"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/topView"
         app:layout_constraintStart_toEndOf="@id/totalDeaths"
         app:layout_constraintEnd_toStartOf="@id/guideRight"
-        android:background="@drawable/background"
+        app:layout_constraintBottom_toTopOf="@id/constrainView"
+        android:background="@drawable/background_total_recovered"
+        android:layout_marginBottom="@dimen/twenty_dp"
         android:padding="@dimen/ten_dp"
         android:layout_marginLeft="@dimen/ten_dp"
         android:layout_marginStart="@dimen/ten_dp">
@@ -137,13 +141,13 @@
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrainView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/background"
-        app:layout_constraintTop_toBottomOf="@id/totalDeaths"
+        app:layout_constraintTop_toBottomOf="@id/totalRecovered"
         app:layout_constraintStart_toEndOf="@id/guideLeft"
         app:layout_constraintEnd_toStartOf="@id/guideRight"
-        android:layout_marginTop="@dimen/twenty_dp"
         app:layout_constraintBottom_toTopOf="@id/guideBottom">
 
         <TextView

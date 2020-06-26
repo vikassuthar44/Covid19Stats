@@ -132,7 +132,6 @@ public class MainActivity extends DaggerAppCompatActivity implements MainContrac
                 return data2.getTotalConfirmed().compareTo(data1.getTotalConfirmed());
             }
         });
-        ;
         countryListAdapter = new CountryListAdapter(currentCountryWiseData, this.getResources().getConfiguration().locale.getDisplayCountry());
         countryList.setAdapter(countryListAdapter);
     }
